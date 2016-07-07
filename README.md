@@ -5,16 +5,18 @@ By actually calling request.JSON.foo in the controller action, it stops the subs
 Works
 ``` bash
 curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: c48c2524-a7a0-c098-2b78-2225e0d9ab7a" -d '{
-    "name": "person name"
-}' "http://localhost:8080/persons?foo=foo"
+    "name": "person name",
+    "foo": "foo"
+}' "http://localhost:8080/persons"
 ```
 
 
 Does Not Work
 ``` bash
 curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: 67cfa64e-5b9e-8bf7-3a5c-3e8a1b104a31" -d '{
-    "name": "place name"
-}' "http://localhost:8080/places?foo=foo"
+    "name": "place name",
+    "foo": "foo"
+}' "http://localhost:8080/places"
 ```
 
 The addition of this line `println 'FOO=' + request.JSON.foo` causes it to break
