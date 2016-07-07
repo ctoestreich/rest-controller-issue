@@ -5,7 +5,7 @@ By actually calling request.JSON.foo in the controller action, it stops the subs
 Works
 ``` bash
 curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -H "Postman-Token: c48c2524-a7a0-c098-2b78-2225e0d9ab7a" -d '{
-    "name": "place name"
+    "name": "person name"
 }' "http://localhost:8080/persons?foo=foo"
 ```
 
