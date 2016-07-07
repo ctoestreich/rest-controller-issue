@@ -1,0 +1,8 @@
+import org.grails.Place
+
+model {
+	Iterable<Place> placeList
+}
+
+json g.render(template: "place", collection: placeList ?: [], var: 'place')
+

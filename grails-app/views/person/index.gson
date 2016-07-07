@@ -1,0 +1,8 @@
+import org.grails.Person
+
+model {
+	Iterable<Person> personList
+}
+
+json g.render(template: "person", collection: personList ?: [], var: 'person')
+

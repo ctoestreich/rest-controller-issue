@@ -1,0 +1,10 @@
+import org.grails.Person
+
+model {
+    Person person
+}
+
+json {
+    name person.name
+    id person.id
+}

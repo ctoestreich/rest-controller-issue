@@ -1,0 +1,10 @@
+import org.grails.Place
+
+model {
+    Place place
+}
+
+json {
+    name place.name
+    id place.id
+}

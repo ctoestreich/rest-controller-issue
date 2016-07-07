@@ -1,0 +1,7 @@
+import org.grails.Place
+
+model {
+	Place place
+}
+
+json g.render(template: "place", model: [place: place])
