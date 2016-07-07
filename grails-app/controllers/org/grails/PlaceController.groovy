@@ -18,7 +18,10 @@ class PlaceController extends RestfulController {
             return
         }
 
-        println 'FOO=' + request.JSON.foo
+        //All of these break it
+//        println 'FOO=' + request.JSON.foo
+        println 'NAME=' + request.JSON.name
+//        println request.JSON
 
         def instance = createResource()
 
